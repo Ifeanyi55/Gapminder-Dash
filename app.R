@@ -14,12 +14,11 @@ source("env.R")
 # get Google api key
 api_key = Sys.getenv("GOOGLE_API_KEY")
 
-# create data of the first 500 rows in gapminder
-gdp_data <- gapminder
+# create dataset
+gap_data <- gapminder
 
-
-# initialize querychat with mtcars dataset and Gemini chat function
-querychat_config <- querychat_init(gdp_data,
+# initialize querychat with gapminder dataset and Gemini chat function
+querychat_config <- querychat_init(gap_data,
                                    create_chat_func = purrr::partial(ellmer::chat_google_gemini, model = "gemini-2.0-flash"),
                                    greeting = "")
 
