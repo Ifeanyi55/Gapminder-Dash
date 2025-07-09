@@ -8,7 +8,7 @@ library(highcharter)
 library(reactable)
 library(shinychat)
 
-# load enviroment variable
+# load environment variable
 source("env.R")
 
 # get Google api key
