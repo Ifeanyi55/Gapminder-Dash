@@ -3,13 +3,12 @@ library(bslib)
 library(bs4Dash)
 library(ellmer)
 library(querychat)
-library(shinythemes)
 library(gapminder)
 library(highcharter)
 library(reactable)
 library(shinychat)
 
-Sys.setenv(GOOGLE_API_KEY = "AIzaSyAau0taEMZoOPtqDS-K_ZxiN6lycfcJ_pE")
+Sys.setenv(GOOGLE_API_KEY = "Your API Key")
 
 # get Gemini api key
 api_key = Sys.getenv("GOOGLE_API_KEY")
