@@ -11,7 +11,7 @@ library(shinychat)
 # load enviroment variable
 source("env.R")
 
-# get Gemini api key
+# get Google api key
 api_key = Sys.getenv("GOOGLE_API_KEY")
 
 # create data of the first 500 rows in gapminder
