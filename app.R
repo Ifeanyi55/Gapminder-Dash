@@ -8,7 +8,8 @@ library(highcharter)
 library(reactable)
 library(shinychat)
 
-Sys.setenv(GOOGLE_API_KEY = "Your API Key")
+# load enviroment variable
+source("env.R")
 
 # get Gemini api key
 api_key = Sys.getenv("GOOGLE_API_KEY")
