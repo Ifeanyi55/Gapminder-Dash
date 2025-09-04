@@ -1,6 +1,5 @@
 # **Gapminder-Dash**
 
-[![License](https://img.shields.io/github/license/Ifeanyi55/Gapminder-Dash)](./LICENSE)
 [![Stars](https://img.shields.io/github/stars/Ifeanyi55/Gapminder-Dash?style=social)](https://github.com/Ifeanyi55/Gapminder-Dash/stargazers)
 [![Forks](https://img.shields.io/github/forks/Ifeanyi55/Gapminder-Dash?style=social)](https://github.com/Ifeanyi55/Gapminder-Dash/network/members)
 [![Issues](https://img.shields.io/github/issues/Ifeanyi55/Gapminder-Dash)](https://github.com/Ifeanyi55/Gapminder-Dash/issues)
