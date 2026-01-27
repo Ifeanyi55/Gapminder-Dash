@@ -9,16 +9,16 @@ library(highcharter)
 library(reactable)
 library(shinychat)
 
-Sys.setenv(GOOGLE_API_KEY = "AIzaSyAau0taEMZoOPtqDS-K_ZxiN6lycfcJ_pE")
-
 # get Gemini api key
-api_key = Sys.getenv("GOOGLE_API_KEY")
+my_creds <- function(){
+  Sys.getenv("GEMINI_API_KEY")
+}
 
 # create data of the first 500 rows in gapminder
 gdp_data <- gapminder
 
 
-# initialize querychat with mtcars dataset and Gemini chat function
+# initialize querychat with gapminder dataset and Gemini chat function
 querychat_config <- querychat_init(gdp_data,
                                    create_chat_func = purrr::partial(ellmer::chat_google_gemini, model = "gemini-2.0-flash"),
                                    greeting = "")
@@ -66,7 +66,7 @@ ui <- tabsetPanel(
     icon = icon("robot",lib = "font-awesome"),
     h3(strong("🤖 EconoBot"),style="text-align:center;color:DodgerBlue;"),
     h5(strong("Answers your economic and financial questions"),style="text-align:center;color:#37474f;"),
-    chat_ui("gemini_chat",placeholder = "Type your message here...")
+    chat_ui("gemini_chat", placeholder = "Type your message here...")
   )
 )
 
@@ -159,8 +159,8 @@ server <- function(input, output) {
   gemini <- chat_google_gemini(
     system_prompt = "You are a friendly and helpful economic and financial expert who only answers questions around country economy and finance. If a user asks a question that is not related to economics or finance, give the following polite response: 'I'm sorry, I can only provide economic and financial information'.
     Also, if a user asks for specific or personal financial advice, give the following polite response: 'I'm sorry, I cannot provide specific financial advice. Please consult a financial advisor for personalized guidance.'",
-    model = "gemini-2.0-flash",
-    api_key = api_key,
+    model = "gemini-2.5-flash",
+    credentials = my_creds,
     echo = T
   )
   
