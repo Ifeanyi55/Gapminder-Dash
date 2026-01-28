@@ -18,7 +18,7 @@ gap_data <- gapminder
 
 
 # initialize querychat with gapminder dataset and Gemini chat function
-querychat_config <- querychat_init(gdp_data,
+querychat_config <- querychat_init(gap_data,
                                    create_chat_func = purrr::partial(ellmer::chat_google_gemini, model = "gemini-2.5-flash"),
                                    greeting = "")
 
