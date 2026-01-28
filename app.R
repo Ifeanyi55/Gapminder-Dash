@@ -3,19 +3,18 @@ library(bslib)
 library(bs4Dash)
 library(ellmer)
 library(querychat)
-library(shinythemes)
 library(gapminder)
 library(highcharter)
 library(reactable)
 library(shinychat)
 
-# fetch credential
+# fetch credentials
 my_creds <- function(){
   Sys.getenv("GEMINI_API_KEY")
 }
 
-# create data of the first 500 rows in gapminder
-gdp_data <- gapminder
+# create dataset
+gap_data <- gapminder
 
 
 # initialize querychat with gapminder dataset and Gemini chat function
