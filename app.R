@@ -9,7 +9,7 @@ library(highcharter)
 library(reactable)
 library(shinychat)
 
-# get Gemini api key
+# fetch credential
 my_creds <- function(){
   Sys.getenv("GEMINI_API_KEY")
 }
@@ -20,7 +20,7 @@ gdp_data <- gapminder
 
 # initialize querychat with gapminder dataset and Gemini chat function
 querychat_config <- querychat_init(gdp_data,
-                                   create_chat_func = purrr::partial(ellmer::chat_google_gemini, model = "gemini-2.0-flash"),
+                                   create_chat_func = purrr::partial(ellmer::chat_google_gemini, model = "gemini-2.5-flash"),
                                    greeting = "")
 
 # define the UI of the dashboard
