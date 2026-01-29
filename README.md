@@ -6,7 +6,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/Ifeanyi55/Gapminder-Dash)](https://github.com/Ifeanyi55/Gapminder-Dash/commits/main)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/Ifeanyi55/Gapminder-Dash)
 
-Query the popular Gapminder dataset using natural language. The project is powered by Gemini 2.0 Flash. 
+Query the popular Gapminder dataset using natural language. The project is powered by Gemini 2.5 Flash. 
 
 Visit the dashboard [here](https://ifeanyi-gapminder.hf.space/).
 
